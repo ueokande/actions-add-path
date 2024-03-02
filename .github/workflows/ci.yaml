@@ -18,4 +18,6 @@ jobs:
       - run: zypper install --no-confirm tar gzip
         if: ${{ matrix.container == 'opensuse/leap' }}
       - uses: actions/checkout@v3
+      - run: id
       - uses: ./action
+      - run: id
