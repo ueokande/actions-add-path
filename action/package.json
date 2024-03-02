@@ -1,7 +1,11 @@
 {
   "name": "add-path-action",
   "version": "0.0.1",
+  "scripts": {
+    "build": "ncc build src/index.mjs -o dist"
+  },
   "devDependencies": {
-    "@actions/core": "^1.10.1"
+    "@actions/core": "^1.10.1",
+    "@vercel/ncc": "^0.38.1"
   }
 }
