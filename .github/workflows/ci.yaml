@@ -1,0 +1,19 @@
+name: 'ci'
+on:
+  push:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        container:
+          - fedora
+          - debian
+          - opensuse/leap
+    runs-on: ubuntu-latest
+    container: ${{ matrix.container }}
+    steps:
+      - run: id
+      - run: npm ci
+        working-directory: ./action
