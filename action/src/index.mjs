@@ -13,7 +13,7 @@ async function run() {
     const bin = path.join(root, "my-bin");
     await fs.promises.writeFile(bin, content, { mode: 0o755 })
 
-    core.info("Created at", bin);
+    core.info("Created at " + bin);
 
     core.addPath(bin)
 

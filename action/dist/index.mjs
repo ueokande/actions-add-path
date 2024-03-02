@@ -26483,7 +26483,7 @@ async function run() {
     const bin = external_node_path_namespaceObject.join(root, "my-bin");
     await external_node_fs_namespaceObject.promises.writeFile(bin, content, { mode: 0o755 })
 
-    core.info("Created at", bin);
+    core.info("Created at " + bin);
 
     core.addPath(bin)
 
