@@ -14,10 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     container: ${{ matrix.container }}
     steps:
-      # Install dependencies to execute actions/checkout on openSuSE
-      - run: zypper install --no-confirm tar gzip
-        if: ${{ matrix.container == 'opensuse/leap' }}
-      - uses: actions/checkout@v3
       - run: id
-      - uses: ./action
+      - uses: ueokande/actions-add-path@master
       - run: id
