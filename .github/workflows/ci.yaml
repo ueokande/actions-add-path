@@ -16,5 +16,6 @@ jobs:
     steps:
       - run: zypper install --no-confirm tar gzip
         if: ${{ matrix.container == 'opensuse/leap' }}
+      - uses: actions/checkout@v3
       - run: npm ci
         working-directory: ./action
