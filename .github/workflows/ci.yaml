@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: opensuse/leap
     steps:
+      - run: echo "$PATH" >>$GITHUB_PATH
       - run: id
       - run: echo "/tmp/.bin" >> $GITHUB_PATH
       - run: id
