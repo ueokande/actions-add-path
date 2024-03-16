@@ -4,8 +4,14 @@ on:
 
 jobs:
   test:
+    strategy:
+      fail-fast: false
+      matrix:
+        container:
+          - debian
+          - opensuse/leap
     runs-on: self-hosted
-    container: opensuse/leap
+    container: ${{ matrix.container }}
     steps:
       - uses: ueokande/actions-add-path@self-hosted
       - uses: juliangruber/sleep-action@v2.0.0
