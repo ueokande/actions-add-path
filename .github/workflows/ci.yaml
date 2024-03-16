@@ -12,6 +12,8 @@ jobs:
           - opensuse/leap
     runs-on: self-hosted
     container: ${{ matrix.container }}
+    env:
+      PROFILEREAD: true
     steps:
       - uses: ueokande/actions-add-path@self-hosted
       - uses: juliangruber/sleep-action@v2.0.0
