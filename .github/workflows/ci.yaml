@@ -12,8 +12,7 @@ jobs:
           - opensuse/leap
     runs-on: self-hosted
     container: ${{ matrix.container }}
-    env:
-      PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     steps:
-      - uses: ueokande/actions-add-path@self-hosted
+      - run: id
+      - run: echo "$HOME/.local/bin" >> $GITHUB_PATH
       - run: id
