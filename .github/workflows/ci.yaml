@@ -11,7 +11,7 @@ jobs:
           - fedora
           - debian
           - opensuse/leap
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     container: ${{ matrix.container }}
     steps:
       - run: echo $GITHUB_PATH
