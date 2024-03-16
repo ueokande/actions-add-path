@@ -10,7 +10,7 @@ jobs:
         container:
           - debian
           - opensuse/leap
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     container: ${{ matrix.container }}
     steps:
       - run: id
