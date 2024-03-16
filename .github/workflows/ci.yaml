@@ -4,15 +4,9 @@ on:
 
 jobs:
   test:
-    strategy:
-      fail-fast: false
-      matrix:
-        container:
-          - debian
-          - opensuse/leap
     runs-on: ubuntu-latest
-    container: ${{ matrix.container }}
+    container: opensuse/leap
     steps:
       - run: id
-      - run: echo "$HOME/.local/bin" >> $GITHUB_PATH
+      - run: echo "/tmp/.bin" >> $GITHUB_PATH
       - run: id
