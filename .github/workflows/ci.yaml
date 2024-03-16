@@ -13,10 +13,7 @@ jobs:
     runs-on: self-hosted
     container: ${{ matrix.container }}
     env:
-      PROFILEREAD: true
+      PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     steps:
       - uses: ueokande/actions-add-path@self-hosted
-      - uses: juliangruber/sleep-action@v2.0.0
-        with:
-          time: 300s
       - run: id
